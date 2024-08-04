@@ -1,0 +1,143 @@
+body {
+    background-color: #0F0F0F;
+    color: #FFFFFF;
+    box-sizing: border-box;
+    margin: 0 auto;
+    font-family: inter;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    margin-top: 350px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.wbt-logo {
+    margin: 1rem;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    width: 1596px;
+    height: 119px;
+    padding: 10rem;
+    
+}
+
+.header__background-image {
+    position: absolute;
+    z-index: -1;
+    margin: 0;
+    opacity: 0.5;
+}
+
+.address__container {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    align-items: center;
+}
+
+.address__pin {
+    width: 47px;
+    height: auto;
+    margin-left: 93px;
+    margin-bottom: 16px;
+}
+
+.address__text {
+    font-size: 18px;
+    margin-left: 88px;
+    text-decoration: none;
+}
+
+.header__instagram-link {
+    margin-left: 450px;
+}
+
+.header__button-container {
+    display: flex;
+}
+
+.header__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
+    width: 355px;
+    height: 71px;
+    font-family: inter, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #000;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+    border-radius: 17px;
+    margin-left: 20px;
+}
+
+.header__phone-icon {
+    position: absolute;
+    margin-left: 308px;
+    margin-top: 24px;
+    cursor: pointer;
+}
+
+.text__container { 
+    max-width: 962px;
+    height: 200px;
+    margin-left: 180px;
+    margin-top: 140px;
+}
+
+.price__container {
+    width: 1603px;
+    height: 1894px;
+}
+
+.price-groups-adults {
+    padding: 0 0 60px 60px;
+    position: relative;
+    width: 626px;
+    height: 530px;
+    border: 3px #FFFFFF solid;
+    border-radius: 19px;
+}
+
+.price-groups__container {
+    gap: 120px;
+    margin-top: 150px;
+    display: flex;
+}
+
+.price-groups-children {
+    padding: 30px 0 30px 30px;
+    position: relative;
+    width: 626px;
+    height: 428px;
+    border: 3px #FFFFFF solid;
+    border-radius: 19px;
+}
+
+.price-other {
+    padding-left: 30px;
+    padding-bottom: 30px;
+    position: relative;
+    width: 1585px;
+    height: 238px;
+    border: 3px #FFFFFF solid;
+    border-radius: 19px;
+}
