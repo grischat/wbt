@@ -3,27 +3,33 @@ body {
     color: #FFFFFF;
     box-sizing: border-box;
     margin: 0 auto;
-    font-family: inter;
+    font-family: 'Inter', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    display: flex;
     flex-direction: column;
+    min-height: 100vh;
+    /* Убедитесь, что body занимает всю высоту экрана */
 }
 
 main {
-    margin-top: 350px;
+    margin-top: 150px;
 }
+
 p {
     word-break: break-word;
 }
+
 a {
     color: inherit;
     text-decoration: none;
 }
 
-.wbt-logo {
-    margin: 1rem;
+.header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    
 }
 
 .header__nav {
@@ -32,14 +38,17 @@ a {
     height: 12vh;
     padding: 10vw;
     position: relative;
+    z-index: 1;
 }
 
 .header__background-image {
     position: absolute;
-    z-index: -1;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
-    margin: 0;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
     opacity: 0.5;
 }
 
@@ -52,11 +61,12 @@ a {
 .address__pin {
     width: 3vw;
     height: auto;
-    margin-left: 5vw;
+    margin-left: 3vw;
     margin-bottom: 1vh;
 }
 
 .address__text {
+    width: 100%;
     font-size: 1.5rem;
     margin-left: 5vw;
     text-decoration: none;
@@ -94,10 +104,15 @@ a {
 .header__phone-icon {
     position: absolute;
     margin-left: 18vw;
-    
     cursor: pointer;
-    
     height: auto;
+}
+@media (max-width: 1366px) {
+    .header__phone-icon {
+        width: 25px;
+        height: 25px;
+        margin-left: 20.3vw;
+    }
 }
 
 .text__container {
@@ -111,31 +126,66 @@ a {
     width: 85vw;
     height: 190vh;
 }
+@media (max-width: 1366px) {
+    .price__container{
+        margin-top: 30vh;
+    }
+    
+}
 
+.price__header {
+    font-size: 73px;
+    text-align: center;
+}
+
+@media (max-width: 1366px) {
+    .price__header {
+        text-align: start;
+    }
+
+}
 .price-groups-adults {
-    padding: 0 0 6vh 6vw;
+    padding: 0 1vw 0 1vw;
     position: relative;
     width: 39vw;
-    height: 53vh;
+    height: 56vh;
     border: 3px #FFFFFF solid;
     border-radius: 1.2rem;
 }
-
+@media(max-width: 1366px) {
+    .price-groups-adults {
+        width: auto;
+        height: auto;
+        padding-left: 4vw;
+    }
+}
 .price-groups__container {
     gap: 12vw;
     margin-top: 15vh;
     display: flex;
+    box-sizing: border-box;
+    overflow: hidden;
 }
-
+@media(max-width: 1366px) {
+    .price-groups__container {
+        flex-direction: column;
+    }
+}
 .price-groups-children {
-    padding: 3vh 0 3vh 3vw;
+    padding: 0 1vw 0 1vw;
     position: relative;
     width: 39vw;
     height: 43vh;
     border: 3px #FFFFFF solid;
     border-radius: 1.2rem;
 }
-
+@media(max-width: 1366px) {
+    .price-groups-children {
+        width: auto;
+        height: auto;
+        padding-left: 4vw;
+    }
+}
 .price-other {
     padding-left: 3vw;
     padding-bottom: 3vh;
@@ -145,7 +195,13 @@ a {
     border: 3px #FFFFFF solid;
     border-radius: 1.2rem;
 }
-
+@media(max-width: 1366px) {
+    .price-other {
+        width: auto;
+        height: auto;
+        padding-left: 3vw;
+    }
+}
 .massage__container {
     gap: 12vw;
     margin-top: 10vh;
@@ -155,14 +211,14 @@ a {
 .massage__text {
     padding: 1vw 2vw;
     width: 80vw;
-    height: 30vh;
+    align-content: center;
     border: 3px #FFFFFF solid;
     border-radius: 1.2rem;
 }
 .massage__text-2 {
     padding: 0.5vw 2vw;
     width: 40vw;
-    height: 37vh;
+    align-content: center;
     border: 3px #FFFFFF solid;
     border-radius: 1.2rem;
 }
@@ -194,4 +250,18 @@ a {
     grid-row: span 2;
     height: 100%;
     object-fit: cover;
+}
+
+.wbt-children {
+    position: absolute;
+    margin-left: 48vw;
+    margin-top: -18vh;
+}
+
+@media (max-width: 1366px) {
+    .wbt-children {
+        position: relative;
+        margin-left: 0;
+        margin-top: 0;
+    }
 }
