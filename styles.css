@@ -102,6 +102,8 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  left: 7rem;
 }
 
 .address__pin {
@@ -144,7 +146,8 @@ header {
   height: 554px;
   object-fit: cover;
 }
-#massage-photo {
+#massage-photo,
+#massage-photo-2 {
   width: 754px;
   height: 554px;
   object-fit: cover;
@@ -177,6 +180,7 @@ header {
   position: absolute;
   cursor: pointer;
   height: auto;
+  right: 19rem;
 }
 
 /* Price section styles */
@@ -338,11 +342,14 @@ header {
   margin-top: 4vh;
   margin-left: 4vw;
 }
+
 #main-header {
+  text-align: center;
   position: relative;
   top: 5rem;
   font-size: 73px;
 }
+
 #lang-switcher {
   background: transparent;
   z-index: 1001;
@@ -358,52 +365,8 @@ header {
   flex-direction: row;
   gap: 2vh;
 }
+
 /* Media Queries - Mobile First Approach */
-@media (min-width: 1366px) {
-  .price-groups__container {
-    flex-direction: row;
-  }
-
-  .header__phone-icon {
-    width: 25px;
-    height: 25px;
-    margin-left: 20.3vw;
-  }
-
-  .wbt-children {
-    position: absolute;
-    margin-left: 48vw;
-    margin-top: -18vh;
-  }
-}
-
-@media (min-width: 1440px) {
-  .address__container {
-    position: relative;
-    left: 5vw;
-  }
-
-  .header__phone-icon {
-    margin-left: 19.6vw;
-  }
-
-  .price-groups__container {
-    gap: 2vw;
-  }
-
-  .price-groups-adults {
-    width: 39vw;
-    height: 89vh;
-  }
-
-  .footer__info {
-    margin-left: 4vw;
-  }
-
-  .footer__geo {
-    margin-left: 9vw;
-  }
-}
 
 @media (min-width: 1920px) {
   .price-other {
@@ -414,11 +377,14 @@ header {
     align-items: start;
     margin-bottom: 1rem;
   }
+
   .price-groups__container {
     display: flex;
     justify-content: space-around;
+    flex-direction: row;
     gap: 7vw;
   }
+
   .massage-groups__container {
     display: flex;
     justify-content: space-around;
@@ -504,4 +470,112 @@ header {
   right: 0;
   position: absolute;
   z-index: -1;
+}
+@media (max-width: 1366px) {
+  #telegram-logo {
+    width: 73px;
+    height: 73px;
+    margin-left: 11vw;
+  }
+  #wbt-people {
+    width: 934px;
+  }
+  #wbt-kids {
+    width: 934px;
+    position: relative;
+    top: 6rem;
+  }
+  .price-massage {
+    padding: 0;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+  }
+  .massage__header {
+    top: 2rem;
+  }
+  .header__phone-icon {
+    right: 14rem;
+  }
+  .header {
+    height: 120vh;
+  }
+  .header__background-image {
+    height: 110%;
+  }
+  .address__pin {
+    margin-left: 0;
+  }
+  .header__nav {
+    padding: 9vh 3vw 9vh 0vw;
+  }
+  .text__container {
+    left: 5vw;
+    width: 65vw;
+  }
+  .price-groups__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .price-groups-adults {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 5rem;
+  }
+  .price-groups-kids {
+    width: auto;
+    height: auto;
+    text-align: center;
+  }
+  .price-other {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .massage-groups__container,
+  .massage-text__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #massage-photo {
+    width: 1054px;
+    position: relative;
+  }
+  #massage-photo-2 {
+    width: 1054px;
+    position: relative;
+    top: 4rem;
+  }
+  .massage__container {
+    height: auto;
+    padding: 0 6vw;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .massage__text {
+    text-align: center;
+  }
+  .massage__text__container {
+    top: 2rem;
+  }
+  .wbt-team__header {
+    top: 16vh;
+  }
+  .wbt-team {
+    height: 240vh;
+  }
+  .massage-groups__container {
+    margin-bottom: 0;
+  }
+  .footer__container {
+    gap: 4rem;
+  }
 }
