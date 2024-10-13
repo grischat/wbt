@@ -59,6 +59,10 @@ header {
   position: relative;
   z-index: 1;
 }
+#schedule-header-text {
+  font-size: 73px;
+  text-align: center;
+}
 .lang__container {
   display: flex;
   justify-content: center;
@@ -136,7 +140,16 @@ header {
   height: 73px;
   margin-left: 26vw;
 }
-
+#team {
+  font-size: 80px;
+}
+#iframe-geo {
+  width: 600px;
+  height: 450px;
+}
+#contacts {
+  font-size: 94px;
+}
 #wbt-logo {
   position: relative;
   left: 5rem;
@@ -577,5 +590,116 @@ header {
   }
   .footer__container {
     gap: 4rem;
+  }
+}
+@media (max-width: 450px) {
+  body {
+    display: inline;
+  }
+  .header {
+    height: 164vh;
+  }
+  .social-media__container {
+    display: none;
+  }
+  .header__nav {
+    display: block;
+  }
+  .address__container {
+    text-align: center;
+    left: 0;
+  }
+  .header__phone-icon {
+    display: none;
+  }
+  .address__pin {
+    width: auto;
+    margin-top: 1rem;
+  }
+  .address__text {
+    margin-left: 0;
+  }
+  .header__button {
+    width: 100%;
+    margin: 1rem;
+  }
+  .text__container {
+    width: auto;
+    text-align: center;
+    left: 0;
+  }
+  #wbt-people,
+  #wbt-kids,
+  #massage-photo,
+  #massage-photo-2 {
+    width: 90%;
+    object-fit: contain;
+    height: 100%;
+  }
+  #schedule-header-text {
+    font-size: 45px;
+  }
+  .photo-gallery__container {
+    display: none;
+  }
+  .photo-gallery__header {
+    margin-top: 0rem;
+    margin-bottom: 10rem;
+  }
+  .massage__header {
+    font-size: 45px;
+  }
+  #contacts {
+    font-size: 45px;
+  }
+  .footer__container {
+    flex-direction: column;
+  }
+  #iframe-geo {
+    width: 90%;
+    height: 100%;
+  }
+  .massage__text {
+    font-size: 35px;
+  }
+  .price-massage {
+    text-align: center;
+  }
+  .team-member__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .team-member {
+    width: auto;
+    height: 360px;
+  }
+  .team-member p {
+    font-size: 26px;
+  }
+  #yuri-grats {
+    font-size: 31px;
+  }
+  .wbt-team {
+    height: 175vh;
+  }
+  #team {
+    font-size: 65px;
+  }
+  #description {
+    font-size: 28px;
+    padding: 0 3vw;
+  }
+  .header {
+    height: auto;
+  }
+  .price-other {
+    text-align: center;
+  }
+}
+@media (max-width: 375px) {
+  .wbt-team {
+    height: 255vh;
+  }
+  #main-header {
+    font-size: 45px;
   }
 }
