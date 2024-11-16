@@ -114,6 +114,7 @@ const translations = {
 function initializeLanguage() {
     const savedLanguage = localStorage.getItem("selectedLanguage") || "ru";
     changeLanguage(savedLanguage);
+    console.log(window.innerWidth)
 }
 
 // Add event listener for when the DOM is fully loaded
