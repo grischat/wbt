@@ -24,7 +24,11 @@
           class="header__background-image"
         />
         <nav class="header__nav">
-          <img src="./assets/wbt-logo.png" alt="Warsaw Boxing Team Logo" id="wbt-logo" />
+          <img
+            src="./assets/wbt-logo.png"
+            alt="Warsaw Boxing Team Logo"
+            id="wbt-logo"
+          />
 
           <div class="address__container">
             <img
@@ -170,8 +174,143 @@
           </div>
         </div>
       </div>
-      <h1 id="schedule-header-text">Расписание тренировок</h1>
-      <img src="/assets/schedule.png" alt="Schedule" style="width: 100%" />
+
+      <div class="schedule__container">
+        <h1 id="schedule-header-text">Расписание</h1>
+        <div class="section-schedule">
+          <h2>Понедельник / Среда / Пятница</h2>
+          <ul>
+            <li>
+              <strong>Время:</strong>
+              <span>17:45</span>
+              <br />
+              <strong>Тренер:</strong>
+              <span>Роман Борисов</span>
+              <br />
+              <strong>Группа:</strong>
+              <span id="kids-young">Дети (5 - 9 лет)</span>
+            </li>
+            <li>
+              <strong>Время:</strong>
+              <span>18:45</span>
+              <br />
+              <strong>Тренер:</strong>
+              <span>Даниил Голиков</span>
+              <br />
+              <strong>Группа:</strong>
+              <span id="kids-older">Дети (10 - 15 лет)</span>
+            </li>
+            <li>
+              <strong>Время:</strong>
+              <span>20:00</span>
+              <br />
+              <strong>Тренер:</strong>
+              <span>Дмитрий Кайда</span>
+              <br />
+              <strong>Группа:</strong>
+              <span id="adults-boxing">Взрослые (Техника бокса)</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section-schedule">
+          <h2>Вторник / Четверг</h2>
+          <ul>
+            <li>
+              <strong>Время:</strong>
+              <span>7:45</span>
+              <br />
+              <strong>Тренер:</strong>
+              <span>Даниил Голиков</span>
+              <br />
+              <strong>Группа:</strong>
+              <span id="adults-crossfit">Взрослые (Боксерский кроссфит)</span>
+            </li>
+            <li>
+              <strong>Время:</strong>
+              <span>17:00</span>
+              <br />
+              <strong>Тренер:</strong>
+              <span>Александра Литвяк</span>
+              <br />
+              <strong>Группа:</strong>
+              <span id="stretching">Стретчинг</span>
+            </li>
+            <li>
+              <strong>Время:</strong>
+              <span>18:15</span>
+              <br />
+              <strong>Тренер:</strong>
+              <span>Алексей Полухин</span>
+              <br />
+              <strong>Группа:</strong>
+              <span id="adults-beginners">Взрослые (Для новичков)</span>
+            </li>
+            <li>
+              <strong>Время:</strong>
+              <span>19:30</span>
+              <br />
+              <strong>Тренер:</strong>
+              <span>Андрей Юлдашев</span>
+              <br />
+              <strong>Группа:</strong>
+              <span id="adults-advanced">Взрослые (Продвинутая)</span>
+            </li>
+            <li>
+              <strong>Время:</strong>
+              <span>20:45</span>
+              <br />
+              <strong>Тренер:</strong>
+              <span>Даниил Голиков</span>
+              <br />
+              <strong>Группа:</strong>
+              <span id="adults-mixed">Взрослые (Смешанная)</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section-schedule">
+          <h2>Суббота</h2>
+          <ul>
+            <li>
+              <strong>Время:</strong>
+              <span>9:30 - 11:30</span>
+              <br />
+              <strong>Спарринг:</strong>
+              <span>Открытый ринг</span>
+            </li>
+            <li>
+              <strong>Время:</strong>
+              <span>12:00</span>
+              <br />
+              <strong>Тренер:</strong>
+              <span>Алексей Полухин</span>
+              <br />
+              <strong>Группа:</strong>
+              <span id="adults-beginners">Взрослые (Для новичков)</span>
+            </li>
+            <li>
+              <strong>Время:</strong>
+              <span>14:00</span>
+              <br />
+              <strong>Тренер:</strong>
+              <span>Александра Литвяк</span>
+              <br />
+              <strong>Группа:</strong>
+              <span id="stretching">Стретчинг</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="working-hours">
+          <h3>Время работы зала</h3>
+          <ul>
+            <li>Понедельник - Пятница: 7:30 - 22:00</li>
+            <br />
+            <li>Суббота: 7:30 - 16:00</li>
+          </ul>
+        </div>
+      </div>
 
       <div class="massage__container">
         <h1 class="massage__header">Массаж</h1>
@@ -207,7 +346,7 @@
 
         <div class="massage-groups__container">
           <div class="price-massage">
-            <p style="font-size: 35px; font-weight: 600">
+            <p id="price-massage" style="font-size: 35px; font-weight: 600">
               Цена одного сеанса - 170 PLN
             </p>
           </div>
