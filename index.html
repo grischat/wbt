@@ -24,7 +24,11 @@
           class="header__background-image"
         />
         <nav class="header__nav">
-          <img src="./assets/wbt-logo.png" alt="Warsaw Boxing" id="wbt-logo" />
+          <img
+            src="./assets/wbt-logo.png"
+            alt="Warsaw Boxing Team Logo"
+            id="wbt-logo"
+          />
 
           <div class="address__container">
             <img
@@ -170,8 +174,15 @@
           </div>
         </div>
       </div>
-      <h1 id="schedule-header-text">Расписание тренировок</h1>
-      <img src="/assets/schedule.png" alt="Schedule" style="width: 100%" />
+
+      <div class="schedule__container">
+        <h1 id="schedule-header-text">Расписание</h1>
+        <img
+          id="schedule-photo"
+          src="/assets/schedule.png"
+          alt="schedule photo"
+        />
+      </div>
 
       <div class="massage__container">
         <h1 class="massage__header">Массаж</h1>
@@ -207,7 +218,7 @@
 
         <div class="massage-groups__container">
           <div class="price-massage">
-            <p style="font-size: 35px; font-weight: 600">
+            <p id="price-massage" style="font-size: 35px; font-weight: 600">
               Цена одного сеанса - 170 PLN
             </p>
           </div>
@@ -259,6 +270,10 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="photo-gallery__mobile">
+        <img src="./assets/photo-group-ru.png" alt="Photo group" />
       </div>
 
       <div class="photo-gallery__container">
@@ -410,5 +425,6 @@
     </footer>
     <script type="module" src="index.js"></script>
     <script src="helpers.js"></script>
+    <script src="changeImages.js"></script>
   </body>
 </html>

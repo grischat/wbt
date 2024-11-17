@@ -1,5 +1,5 @@
 /* Base styles (mobile-first) */
-/* * {
+/*  {
   outline: 1px solid red;
 } */
 body {
@@ -83,7 +83,9 @@ header {
 .lang-button:hover {
   color: #b4a26d;
 }
-
+.photo-gallery__mobile {
+  display: none;
+}
 .header__background-image {
   position: absolute;
   top: 0;
@@ -159,6 +161,11 @@ header {
   height: 554px;
   object-fit: cover;
 }
+#wbt-kids {
+  width: 754px;
+  height: 500px;
+  object-fit: cover;
+}
 #massage-photo,
 #massage-photo-2 {
   width: 754px;
@@ -204,13 +211,14 @@ header {
 .price__container::before {
   content: "";
   background: url("/assets/graffity-bg.jpg") no-repeat center center/cover;
-  opacity: 0.1;
+  opacity: 0.05;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   position: absolute;
   z-index: -1;
+  height: 250vh;
 }
 
 .price__header {
@@ -220,7 +228,8 @@ header {
 .massage__header {
   position: relative;
   margin-top: 0;
-  top: 2rem;
+  margin-bottom: 8rem;
+  top: 4rem;
   font-size: 73px;
   text-align: center;
 }
@@ -267,7 +276,7 @@ header {
 /* Massage section styles */
 .massage__container {
   position: relative;
-  height: 140vh;
+  height: 153vh;
 }
 
 .massage__text__container {
@@ -395,7 +404,6 @@ header {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
-    gap: 7vw;
   }
 
   .massage-groups__container {
@@ -484,7 +492,8 @@ header {
   position: absolute;
   z-index: -1;
 }
-@media (max-width: 1366px) {
+
+@media (max-width: 1536px) {
   #telegram-logo {
     width: 73px;
     height: 73px;
@@ -549,6 +558,7 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-bottom: 3rem;
   }
   .massage-groups__container,
   .massage-text__container {
@@ -583,7 +593,7 @@ header {
     top: 16vh;
   }
   .wbt-team {
-    height: 240vh;
+    height: 250vh;
   }
   .massage-groups__container {
     margin-bottom: 0;
@@ -596,14 +606,22 @@ header {
   body {
     display: inline;
   }
+  ul {
+    margin: 0;
+  }
   .header {
     height: 164vh;
+  }
+  .header__background-image {
+    height: 120%;
   }
   .social-media__container {
     display: none;
   }
   .header__nav {
-    display: block;
+    display: flex;
+    gap: 1.5rem;
+    padding-bottom: 0;
   }
   .address__container {
     text-align: center;
@@ -613,31 +631,44 @@ header {
     display: none;
   }
   .address__pin {
-    width: auto;
-    margin-top: 1rem;
+    display: none;
   }
   .address__text {
-    margin-left: 0;
+    text-align: left;
+    font-size: 0.75rem;
+    position: relative;
+    left: 2rem;
   }
   .header__button {
-    width: 100%;
-    margin: 1rem;
+    display: none;
   }
   .text__container {
     width: auto;
     text-align: center;
     left: 0;
   }
+  #wbt-logo {
+    left: 2rem;
+  }
   #wbt-people,
   #wbt-kids,
   #massage-photo,
   #massage-photo-2 {
-    width: 90%;
+    width: 80%;
     object-fit: contain;
     height: 100%;
   }
   #schedule-header-text {
     font-size: 45px;
+  }
+  #address {
+    width: auto;
+  }
+  #schedule-image {
+    display: none;
+  }
+  .lang-button {
+    font-size: 20px;
   }
   .photo-gallery__container {
     display: none;
@@ -648,6 +679,7 @@ header {
   }
   .massage__header {
     font-size: 45px;
+    margin-bottom: 0;
   }
   #contacts {
     font-size: 45px;
@@ -658,6 +690,12 @@ header {
   #iframe-geo {
     width: 90%;
     height: 100%;
+  }
+  #academy {
+    font-size: 21px !important;
+  }
+  #team {
+    font-size: 25px;
   }
   .massage__text {
     font-size: 35px;
@@ -681,18 +719,112 @@ header {
   .wbt-team {
     height: 175vh;
   }
-  #team {
-    font-size: 65px;
+
+  #main-header {
+    font-size: 35px;
+    padding: 0 10vw;
+    top: 3rem;
   }
   #description {
-    font-size: 28px;
-    padding: 0 3vw;
+    font-size: 12px !important;
+    padding: 0vh 8vw;
+  }
+  #schedule-header-text {
+    font-size: 21px;
+    margin-top: 0;
+    margin-bottom: 2rem;
   }
   .header {
     height: auto;
   }
   .price-other {
     text-align: center;
+    width: 80%;
+  }
+  .price-groups__container {
+    margin-top: 10vh;
+  }
+  .price-groups-adults,
+  .price-groups-kids {
+    width: 80%;
+  }
+  #group-trainings {
+    font-size: 21px !important;
+    padding: 2vh 1vw 0 1vw;
+  }
+  #adult-group,
+  #kids-group,
+  #kids-group-prices {
+    font-size: 20px !important;
+  }
+  #adult-group {
+    margin-bottom: 0;
+  }
+  #individual-training-price,
+  #gym-entry-price,
+  #open-plan-price {
+    font-size: 16px !important;
+  }
+  #kids-group-prices {
+    line-height: 3rem !important;
+  }
+  #adult-group-prices {
+    font-size: 20px !important;
+    padding: 0 3vw;
+  }
+  .massage__text__container {
+    width: 80%;
+  }
+  .massage__text {
+    font-size: 16px;
+    line-height: 1.5rem;
+  }
+  .price-massage {
+    width: 80%;
+  }
+  #price-massage {
+    font-size: 16px !important;
+  }
+  .wbt-team {
+    display: none;
+  }
+  .schedule-mobile {
+    display: block;
+    padding: 0 10vw;
+    margin-bottom: 5rem;
+  }
+  .section-schedule {
+    font-size: 12px;
+    line-height: 1.5rem;
+  }
+  .schedule__container {
+    display: none;
+  }
+  .schedule__container::before {
+    content: "";
+    background: url(/assets/graffity-bg-blurred.png) no-repeat center center /
+      cover;
+    opacity: 1;
+    height: 131vh;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+  .photo-gallery__mobile {
+    display: block;
+    
+  }
+  .price__container::before {
+    height: 245vh;
+    background: url(/assets/graffity-bg-blurred.png) no-repeat center center /
+      cover;
+    opacity: 1;
+  }
+  .working-hours {
+    margin-bottom: 8rem;
   }
 }
 @media (max-width: 375px) {
