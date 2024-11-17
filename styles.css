@@ -83,7 +83,9 @@ header {
 .lang-button:hover {
   color: #b4a26d;
 }
-
+.photo-gallery__mobile {
+  display: none;
+}
 .header__background-image {
   position: absolute;
   top: 0;
@@ -385,9 +387,7 @@ header {
   flex-direction: row;
   gap: 2vh;
 }
-.schedule-mobile {
-  display: none;
-}
+
 /* Media Queries - Mobile First Approach */
 
 @media (min-width: 1920px) {
@@ -404,7 +404,6 @@ header {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
-    gap: 7vw;
   }
 
   .massage-groups__container {
@@ -799,8 +798,7 @@ header {
     line-height: 1.5rem;
   }
   .schedule__container {
-    position: relative;
-    padding: 0 11vw;
+    display: none;
   }
   .schedule__container::before {
     content: "";
@@ -814,6 +812,10 @@ header {
     right: 0;
     position: absolute;
     z-index: -1;
+  }
+  .photo-gallery__mobile {
+    display: block;
+    
   }
   .price__container::before {
     height: 245vh;

@@ -270,7 +270,12 @@ function updateScheduleSection(lang) {
   // Update day headers
   const scheduleHeaders = document.querySelectorAll(".section-schedule h2");
   scheduleHeaders.forEach((header) => {
-    if (header.textContent === "Суббота") {
+    if (header.textContent.includes("Понедельник / Среда / Пятница")) {
+      header.textContent =
+        translations[lang].scheduleDetails.mondayWednesdayFriday;
+    } else if (header.textContent.includes("Вторник / Четверг")) {
+      header.textContent = translations[lang].scheduleDetails.tuesdayThursday;
+    } else if (header.textContent === "Суббота") {
       header.textContent = translations[lang].scheduleDetails.saturday;
     }
   });
@@ -308,13 +313,12 @@ function updateScheduleSection(lang) {
   });
 
   // Update group names
-  const beginners = document.getElementById("adults-beginners");
-  if (beginners) {
+
+  if (document.getElementById("adults-beginners")) {
     beginners.textContent = translations[lang].scheduleDetails.adultsBeginners;
   }
 
-  const stretching = document.getElementById("stretching");
-  if (stretching) {
+  if (document.getElementById("stretching")) {
     stretching.textContent = translations[lang].scheduleDetails.stretching;
   }
 }
@@ -331,8 +335,6 @@ function changeLanguage(lang) {
     translations[lang].description;
   document.getElementById("main-header").textContent =
     translations[lang].mainHeader;
-
-  updateGymHours(lang);
 
   // Update all group training sections
   const groupTrainingsElements = document.querySelectorAll("#group-trainings");
@@ -369,8 +371,6 @@ function changeLanguage(lang) {
     translations[lang].gymEntry;
   document.getElementById("open-plan-price").textContent =
     translations[lang].openPlan;
-
-  updateScheduleSection(lang);
 
   // Update massage section
   document.querySelector(".massage__header").textContent =
