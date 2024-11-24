@@ -13,6 +13,16 @@
       href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
   </head>
 
   <body>
@@ -225,6 +235,62 @@
         </div>
       </div>
 
+      <div class="wbt-team__mobile-container">
+        <h2 class="photo-gallery__caption">Наша команда</h2>
+      </div>
+
+      <div class="wbt-team__mobile">
+        <div class="photo-gallery">
+          <div>
+            <img
+              src="/assets/photos/team/andriy-yuldashev.jpg"
+              alt="Андрей Юлдашев"
+              class="photo-gallery__image"
+            />
+            <h2 class="photo-gallery__caption">
+              Андрей <br />
+              Юлдашев
+            </h2>
+          </div>
+
+          <div>
+            <img
+              src="/assets/photos/team/dmytro-kaida.jpg"
+              alt="Дмитрий Кайда"
+              class="photo-gallery__image"
+            />
+            <h2 class="photo-gallery__caption">
+              Дмитрий <br />
+              Кайда
+            </h2>
+          </div>
+
+          <div>
+            <img
+              src="/assets/photos/team/daniil-golikov.jpg"
+              alt="Даниил Голиков"
+              class="photo-gallery__image"
+            />
+            <h2 class="photo-gallery__caption">
+              Даниил <br />
+              Голиков
+            </h2>
+          </div>
+
+          <div>
+            <img
+              src="/assets/photos/team/aleksei-palukhin.jpg"
+              alt="Алексей Палухин"
+              class="photo-gallery__image"
+            />
+            <h2 class="photo-gallery__caption">
+              Алексей <br />
+              Палухин
+            </h2>
+          </div>
+        </div>
+      </div>
+
       <div class="wbt-team">
         <div class="wbt-team__container">
           <h1 class="wbt-team__header">Наша команда</h1>
@@ -273,7 +339,11 @@
       </div>
 
       <div class="photo-gallery__mobile">
-        <img src="./assets/photo-group-ru.png" alt="Photo group" />
+        <img
+          src="./assets/photo-group-ru.png"
+          alt="Photo group"
+          style="width: 100%"
+        />
       </div>
 
       <div class="photo-gallery__container">
@@ -426,5 +496,29 @@
     <script type="module" src="index.js"></script>
     <script src="helpers.js"></script>
     <script src="changeImages.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".photo-gallery").slick({
+          dots: false,
+          infinite: true,
+          speed: 500,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 3000,
+          adaptiveHeight: true,
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                arrows: false,
+              },
+            },
+          ],
+        });
+      });
+    </script>
   </body>
 </html>

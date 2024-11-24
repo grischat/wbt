@@ -1,5 +1,5 @@
 /* Base styles (mobile-first) */
-/*  {
+/* * {
   outline: 1px solid red;
 } */
 body {
@@ -62,6 +62,12 @@ header {
 #schedule-header-text {
   font-size: 73px;
   text-align: center;
+}
+#schedule-photo {
+  width: 100%;
+}
+.wbt-team__mobile {
+  display: none;
 }
 .lang__container {
   display: flex;
@@ -328,10 +334,12 @@ header {
 .photo-large {
   grid-row: span 2;
 }
+.photo-gallery img,
 .photo-gallery__image {
-  width: 100%;
-  height: 100%;
+  width: calc(100% - 4rem); /* Subtracting padding from width */
+  height: calc(100% - 4rem); /* Subtracting padding from height */
   object-fit: cover;
+  margin: 2rem; /* Adding margin */
 }
 .photo-gallery__header {
   font-weight: 800;
@@ -500,21 +508,20 @@ header {
     margin-left: 11vw;
   }
   #wbt-people {
-    width: 934px;
+    width: 634px;
+    position: relative;
+    top: 2rem;
   }
   #wbt-kids {
-    width: 934px;
-    position: relative;
-    top: 6rem;
+    width: 634px;
+    height: 380px;
   }
   .price-massage {
     padding: 0;
     margin-top: 5rem;
     margin-bottom: 3rem;
   }
-  .massage__header {
-    top: 2rem;
-  }
+
   .header__phone-icon {
     right: 14rem;
   }
@@ -536,8 +543,9 @@ header {
   }
   .price-groups__container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-around;
   }
   .price-groups-adults {
     width: auto;
@@ -560,6 +568,9 @@ header {
     flex-direction: column;
     margin-bottom: 3rem;
   }
+  .price__container::before {
+    height: 110%;
+  }
   .massage-groups__container,
   .massage-text__container {
     display: flex;
@@ -575,6 +586,12 @@ header {
     width: 1054px;
     position: relative;
     top: 4rem;
+  }
+  #group-trainings {
+    font-size: 28px !important;
+  }
+  #main-header {
+    font-size: 43px;
   }
   .massage__container {
     height: auto;
@@ -650,6 +667,10 @@ header {
   #wbt-logo {
     left: 2rem;
   }
+  #wbt-kids {
+    position: relative;
+    top: 4rem;
+  }
   #wbt-people,
   #wbt-kids,
   #massage-photo,
@@ -687,6 +708,11 @@ header {
   .footer__container {
     flex-direction: column;
   }
+  .footer__container::before {
+    background: url(/assets/graffity-bg-blurred.png) no-repeat center center /
+      cover;
+    opacity: 1;
+  }
   #iframe-geo {
     width: 90%;
     height: 100%;
@@ -699,6 +725,10 @@ header {
   }
   .massage__text {
     font-size: 35px;
+  }
+  .massage__header {
+    position: relative;
+    top: 2rem;
   }
   .price-massage {
     text-align: center;
@@ -742,6 +772,9 @@ header {
     width: 80%;
   }
   .price-groups__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 10vh;
   }
   .price-groups-adults,
@@ -815,16 +848,22 @@ header {
   }
   .photo-gallery__mobile {
     display: block;
-    
   }
   .price__container::before {
-    height: 245vh;
+    height: 100%;
     background: url(/assets/graffity-bg-blurred.png) no-repeat center center /
       cover;
     opacity: 1;
   }
-  .working-hours {
-    margin-bottom: 8rem;
+
+  .wbt-team__mobile-container {
+    display: block;
+    background: url("./assets/boxing-amunition.jpg") no-repeat center
+      center/cover;
+    z-index: -1;
+  }
+  .wbt-team__mobile {
+    display: block;
   }
 }
 @media (max-width: 375px) {
@@ -834,4 +873,47 @@ header {
   #main-header {
     font-size: 45px;
   }
+}
+/* slider */
+.photo-gallery__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.photo-gallery {
+  margin-top: 0rem;
+}
+.photo-gallery__image {
+  max-width: 100%;
+  height: auto;
+}
+.slick-prev,
+.slick-next {
+  z-index: 1;
+}
+.slick-prev {
+  left: 10px;
+}
+.slick-next {
+  right: 10px;
+}
+.slick-slide {
+  margin: 0 15px;
+}
+.photo-gallery__image {
+  width: 350px;
+  height: 450px;
+  margin: 0 auto;
+  object-fit: cover;
+  border: 2px solid #b4a26d;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+.photo-gallery__caption {
+  position: absolute;
+  bottom: 20px;
+  font-size: 36px;
+  margin-left: 8rem;
+  text-align: center;
 }
