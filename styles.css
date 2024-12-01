@@ -51,6 +51,7 @@ header {
 .header {
   position: relative;
   height: 85vh;
+  z-index: 1;
 }
 .header__nav {
   display: flex;
@@ -437,7 +438,9 @@ header {
   width: 30vw;
   height: 37vh;
 }
-
+.wbt-team__mobile-container {
+  display: none;
+}
 .photo-gallery__header {
   font-size: 53px;
 }
@@ -753,16 +756,18 @@ header {
   #main-header {
     font-size: 35px;
     padding: 0 10vw;
-    top: 3rem;
+    top: 5rem;
   }
   #description {
     font-size: 12px !important;
     padding: 0vh 8vw;
   }
   #schedule-header-text {
-    font-size: 21px;
+    position: relative;
+    top: 2rem;
+    font-size: 35px;
     margin-top: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
   }
   .header {
     height: auto;
@@ -831,20 +836,13 @@ header {
     line-height: 1.5rem;
   }
   .schedule__container {
-    display: none;
+    display: block;
   }
-  .schedule__container::before {
-    content: "";
+  .schedule__container {
+    display: block;
     background: url(/assets/graffity-bg-blurred.png) no-repeat center center /
       cover;
-    opacity: 1;
-    height: 131vh;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;
+    height: 46vh;
   }
   .photo-gallery__mobile {
     display: block;
@@ -856,14 +854,10 @@ header {
     opacity: 1;
   }
 
-  .wbt-team__mobile-container {
-    display: block;
-    background: url("./assets/boxing-amunition.jpg") no-repeat center
-      center/cover;
-    z-index: -1;
-  }
   .wbt-team__mobile {
     display: block;
+    background: url(/assets/graffity-bg-blurred.png) no-repeat center center /
+      cover;
   }
 }
 @media (max-width: 375px) {
@@ -875,15 +869,15 @@ header {
   }
 }
 /* slider */
-.photo-gallery__container {
+.team-slider__container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
-.photo-gallery {
+.team-slider {
   margin-top: 0rem;
 }
-.photo-gallery__image {
+.team-slider__image {
   max-width: 100%;
   height: auto;
 }
@@ -900,7 +894,7 @@ header {
 .slick-slide {
   margin: 0 15px;
 }
-.photo-gallery__image {
+.team-slider__image {
   width: 350px;
   height: 450px;
   margin: 0 auto;
@@ -910,10 +904,19 @@ header {
   position: relative;
   overflow: hidden;
 }
-.photo-gallery__caption {
-  position: absolute;
-  bottom: 20px;
+.team-slider__caption {
+  position: relative;
+  bottom: 150px;
   font-size: 36px;
-  margin-left: 8rem;
   text-align: center;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #b4a26d;;
+}
+.team-slider__header {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 10rem;
+  margin-top: 0;
+  position: relative;
+  top: 5rem;
 }

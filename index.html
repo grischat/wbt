@@ -189,7 +189,7 @@
         <h1 id="schedule-header-text">Расписание</h1>
         <img
           id="schedule-photo"
-          src="/assets/schedule.png"
+          src="/assets/schedule-eng.png"
           alt="schedule photo"
         />
       </div>
@@ -235,19 +235,16 @@
         </div>
       </div>
 
-      <div class="wbt-team__mobile-container">
-        <h2 class="photo-gallery__caption">Наша команда</h2>
-      </div>
-
       <div class="wbt-team__mobile">
-        <div class="photo-gallery">
+        <h2 class="team-slider__header">Наша команда</h2>
+        <div class="team-slider">
           <div>
             <img
               src="/assets/photos/team/andriy-yuldashev.jpg"
               alt="Андрей Юлдашев"
-              class="photo-gallery__image"
+              class="team-slider__image"
             />
-            <h2 class="photo-gallery__caption">
+            <h2 class="team-slider__caption">
               Андрей <br />
               Юлдашев
             </h2>
@@ -257,9 +254,9 @@
             <img
               src="/assets/photos/team/dmytro-kaida.jpg"
               alt="Дмитрий Кайда"
-              class="photo-gallery__image"
+              class="team-slider__image"
             />
-            <h2 class="photo-gallery__caption">
+            <h2 class="team-slider__caption">
               Дмитрий <br />
               Кайда
             </h2>
@@ -269,9 +266,9 @@
             <img
               src="/assets/photos/team/daniil-golikov.jpg"
               alt="Даниил Голиков"
-              class="photo-gallery__image"
+              class="team-slider__image"
             />
-            <h2 class="photo-gallery__caption">
+            <h2 class="team-slider__caption">
               Даниил <br />
               Голиков
             </h2>
@@ -281,9 +278,9 @@
             <img
               src="/assets/photos/team/aleksei-palukhin.jpg"
               alt="Алексей Палухин"
-              class="photo-gallery__image"
+              class="team-slider__image"
             />
-            <h2 class="photo-gallery__caption">
+            <h2 class="team-slider__caption">
               Алексей <br />
               Палухин
             </h2>
@@ -340,7 +337,7 @@
 
       <div class="photo-gallery__mobile">
         <img
-          src="./assets/photo-group-ru.png"
+          src="./assets/photo-group.png"
           alt="Photo group"
           style="width: 100%"
         />
@@ -500,7 +497,7 @@
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
       $(document).ready(function () {
-        $(".photo-gallery").slick({
+        $(".team-slider").slick({
           dots: false,
           infinite: true,
           speed: 500,

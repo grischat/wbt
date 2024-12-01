@@ -72,6 +72,12 @@ const translations = {
       daniilGolikov: "Даниил Голиков",
       alekseiPalukhin: "Алексей Полухин",
     },
+    teamSliderCaptions: {
+      andriyYuldashev: "Андрей <br /> Юлдашев",
+      dmytroKaida: "Дмитрий <br /> Кайда",
+      daniilGolikov: "Даниил <br /> Голиков",
+      alekseiPalukhin: "Алексей <br /> Палухин",
+    },
     photoGalleryHeader: "Бокс в каждом жизненном шаге",
     contacts: "Контакты",
     address: "Warszawa, Mokotów,<br>Postępu 19/5",
@@ -146,6 +152,12 @@ const translations = {
       dmytroKaida: "Dmytro Kaida",
       daniilGolikov: "Daniil Golikov",
       alekseiPalukhin: "Aleksei Palukhin",
+    },
+    teamSliderCaptions: {
+      andriyYuldashev: "Andriy <br /> Yuldashev",
+      dmytroKaida: "Dmytro <br /> Kaida",
+      daniilGolikov: "Daniil <br /> Golikov",
+      alekseiPalukhin: "Aleksei <br /> Palukhin",
     },
     photoGalleryHeader: "Boks w każdym kroku życia",
     contacts: "Kontakty",
@@ -222,6 +234,12 @@ const translations = {
       daniilGolikov: "Daniil Golikov",
       alekseiPalukhin: "Aleksei Palukhin",
     },
+    teamSliderCaptions: {
+      andriyYuldashev: "Andrey <br /> Yuldashev",
+      dmytroKaida: "Dmitry <br /> Kaida",
+      daniilGolikov: "Daniil <br /> Golikov",
+      alekseiPalukhin: "Alexey <br /> Polukhin",
+    },
     photoGalleryHeader: "Boxing in every life step",
     contacts: "Contacts",
     address: "Warsaw, Mokotów,<br>Postępu 19/5",
@@ -231,7 +249,7 @@ const translations = {
 function initializeLanguage() {
   const savedLanguage = localStorage.getItem("selectedLanguage") || "ru";
   changeLanguage(savedLanguage);
-  console.log(window.innerWidth);
+  
 }
 
 // Add event listener for when the DOM is fully loaded
@@ -244,6 +262,7 @@ document.addEventListener("DOMContentLoaded", function () {
   langButtons.forEach((button) => {
     button.onclick = function () {
       changeLanguage(this.textContent.toLowerCase());
+      location.reload();
     };
   });
 });
@@ -417,5 +436,18 @@ function changeLanguage(lang) {
         }
       }
     );
+  });
+
+  // Update team slider captions
+  const teamSliderCaptions = document.querySelectorAll(".team-slider__caption");
+  teamSliderCaptions.forEach((caption) => {
+    const teamSliderNames = Object.values(
+      translations[lang].teamSliderCaptions
+    );
+    const currentIndex = Array.from(teamSliderCaptions).indexOf(caption);
+
+    if (teamSliderNames[currentIndex]) {
+      caption.innerHTML = teamSliderNames[currentIndex];
+    }
   });
 }

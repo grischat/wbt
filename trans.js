@@ -31,6 +31,12 @@ export const translations = {
       daniilGolikov: "Даниил Голиков",
       alekseiPalukhin: "Алексей Полухин",
     },
+    teamSliderCaptions: {
+      andriyYuldashev: "Андрей <br /> Юлдашев",
+      dmytroKaida: "Дмитрий <br /> Кайда", 
+      daniilGolikov: "Даниил <br /> Голиков",
+      alekseiPalukhin: "Алексей <br /> Палухин"
+    },
     photoGalleryHeader: "Бокс в каждом жизненном шаге",
     contacts: "Контакты",
     address: "Warszawa, Mokotów,<br>Postępu 19/5",
@@ -67,6 +73,12 @@ export const translations = {
       daniilGolikov: "Daniil Golikov",
       alekseiPalukhin: "Aleksei Palukhin",
     },
+    teamSliderCaptions: {
+      andriyYuldashev: "Andriy <br /> Yuldashev",
+      dmytroKaida: "Dmytro <br /> Kaida", 
+      daniilGolikov: "Daniil <br /> Golikov",
+      alekseiPalukhin: "Aleksei <br /> Palukhin"
+    },
     photoGalleryHeader: "Boks w każdym kroku życia",
     contacts: "Kontakty",
     address: "Warszawa, Mokotów,<br>Postępu 19/5",
@@ -102,6 +114,12 @@ export const translations = {
       dmytroKaida: "Dmytro Kaida",
       daniilGolikov: "Daniil Golikov",
       alekseiPalukhin: "Aleksei Palukhin",
+    },
+    teamSliderCaptions: {
+      andriyYuldashev: "Andrey <br /> Yuldashev",
+      dmytroKaida: "Dmitry <br /> Kaida", 
+      daniilGolikov: "Daniil <br /> Golikov",
+      alekseiPalukhin: "Alexey <br /> Polukhin"
     },
     photoGalleryHeader: "Boxing in every life step",
     contacts: "Contacts",
