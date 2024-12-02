@@ -17,7 +17,7 @@ const translations = {
     individualTraining: "Индивидуальная тренировка - 170 PLN",
     gymEntry: "Свободный вход в зал (без групп) - 10 входов - 220 PLN",
     openPlan: "Open (группы + свободный вход без лимита) - 400 PLN",
-    schedule: "Расписание тренировок",
+    schedule: "Расписание",
     scheduleDetails: {
       mondayWednesdayFriday: "Понедельник / Среда / Пятница",
       tuesdayThursday: "Вторник / Четверг",
@@ -36,26 +36,6 @@ const translations = {
       adultsBeginners: "Взрослые (Для новичков)",
       adultsAdvanced: "Взрослые (Продвинутая)",
       adultsMixed: "Взрослые (Смешанная)",
-      openRing: "Открытый ринг",
-      workingHours: {
-        weekdays: "7:30 - 22:00",
-        saturday: "7:30 - 16:00",
-      },
-      trainers: {
-        romanBorisov: "Роман Борисов",
-        daniilGolikov: "Даниил Голиков",
-        dmitryKaida: "Дмитрий Кайда",
-        alexandraLitvyak: "Александра Литвяк",
-        alexeyPolukhin: "Алексей Полухин",
-        andreyYuldashev: "Андрей Юлдашев",
-      },
-    },
-    gymHours: {
-      header: "Время работы зала",
-      schedule: {
-        weekdays: "Понедельник - Пятница: 7:30 - 22:00",
-        saturday: "Суббота: 7:30 - 16:00",
-      },
     },
     massage: "Массаж",
     massageText1:
@@ -98,7 +78,7 @@ const translations = {
     individualTraining: "Trening indywidualny - 170 PLN",
     gymEntry: "Wolne wejście na siłownię (bez grup) - 10 wejść - 220 PLN",
     openPlan: "Open (grupy + wolne wejście bez limitu) - 400 PLN",
-    schedule: "Harmonogram treningów",
+    schedule: "Harmonogram",
     scheduleDetails: {
       mondayWednesdayFriday: "Poniedziałek / Środa / Piątek",
       tuesdayThursday: "Wtorek / Czwartek",
@@ -118,25 +98,6 @@ const translations = {
       adultsAdvanced: "Dorośli (Zaawansowana)",
       adultsMixed: "Dorośli (Mieszana)",
       openRing: "Otwarty ring",
-      workingHours: {
-        weekdays: "7:30 - 22:00",
-        saturday: "7:30 - 16:00",
-      },
-      trainers: {
-        romanBorisov: "Roman Borisov",
-        daniilGolikov: "Daniil Golikov",
-        dmitryKaida: "Dmitry Kaida",
-        alexandraLitvyak: "Alexandra Litvyak",
-        alexeyPolukhin: "Alexey Polukhin",
-        andreyYuldashev: "Andrey Yuldashev",
-      },
-    },
-    gymHours: {
-      header: "Godziny otwarcia",
-      schedule: {
-        weekdays: "Poniedziałek - Piątek: 7:30 - 22:00",
-        saturday: "Sobota: 7:30 - 16:00",
-      },
     },
     massage: "Masaż",
     massageText1:
@@ -179,7 +140,7 @@ const translations = {
     individualTraining: "Individual training - 170 PLN",
     gymEntry: "Free gym entry (no groups) - 10 entries - 220 PLN",
     openPlan: "Open (groups + unlimited free entry) - 400 PLN",
-    schedule: "Training Schedule",
+    schedule: "Schedule",
     scheduleDetails: {
       mondayWednesdayFriday: "Monday / Wednesday / Friday",
       tuesdayThursday: "Tuesday / Thursday",
@@ -198,26 +159,6 @@ const translations = {
       adultsBeginners: "Adults (For Beginners)",
       adultsAdvanced: "Adults (Advanced)",
       adultsMixed: "Adults (Mixed)",
-      openRing: "Open Ring",
-      workingHours: {
-        weekdays: "7:30 - 22:00",
-        saturday: "7:30 - 16:00",
-      },
-      trainers: {
-        romanBorisov: "Roman Borisov",
-        daniilGolikov: "Daniil Golikov",
-        dmitryKaida: "Dmitry Kaida",
-        alexandraLitvyak: "Alexandra Litvyak",
-        alexeyPolukhin: "Alexey Polukhin",
-        andreyYuldashev: "Andrey Yuldashev",
-      },
-    },
-    gymHours: {
-      header: "Gym Hours",
-      schedule: {
-        weekdays: "Monday - Friday: 7:30 - 22:00",
-        saturday: "Saturday: 7:30 - 16:00",
-      },
     },
     massage: "Massage",
     massageText1:
@@ -249,7 +190,6 @@ const translations = {
 function initializeLanguage() {
   const savedLanguage = localStorage.getItem("selectedLanguage") || "ru";
   changeLanguage(savedLanguage);
-  
 }
 
 // Add event listener for when the DOM is fully loaded
@@ -267,81 +207,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Update the changeLanguage function to include the new translations:
-function updateGymHours(lang) {
-  const gymHoursHeader = document.querySelector(".working-hours h3");
-  const gymHoursSchedule = document.querySelector(".working-hours ul");
-
-  if (gymHoursHeader) {
-    gymHoursHeader.textContent = translations[lang].gymHours.header;
-  }
-
-  if (gymHoursSchedule) {
-    gymHoursSchedule.innerHTML = `
-        <li>${translations[lang].gymHours.schedule.weekdays}</li>
-        <br />
-        <li>${translations[lang].gymHours.schedule.saturday}</li>
-      `;
-  }
-}
-
-function updateScheduleSection(lang) {
-  // Update day headers
-  const scheduleHeaders = document.querySelectorAll(".section-schedule h2");
-  scheduleHeaders.forEach((header) => {
-    if (header.textContent.includes("Понедельник / Среда / Пятница")) {
-      header.textContent =
-        translations[lang].scheduleDetails.mondayWednesdayFriday;
-    } else if (header.textContent.includes("Вторник / Четверг")) {
-      header.textContent = translations[lang].scheduleDetails.tuesdayThursday;
-    } else if (header.textContent === "Суббота") {
-      header.textContent = translations[lang].scheduleDetails.saturday;
-    }
-  });
-
-  // Update labels and values
-  document.querySelectorAll(".section-schedule strong").forEach((label) => {
-    switch (label.textContent.replace(":", "")) {
-      case "Время":
-        label.textContent = translations[lang].scheduleDetails.time + ":";
-        break;
-      case "Спарринг":
-        label.textContent = translations[lang].scheduleDetails.sparring + ":";
-        break;
-      case "Тренер":
-        label.textContent = translations[lang].scheduleDetails.trainer + ":";
-        break;
-      case "Группа":
-        label.textContent = translations[lang].scheduleDetails.group + ":";
-        break;
-    }
-  });
-
-  // Update trainer names
-  document.querySelectorAll(".section-schedule span").forEach((span) => {
-    const trainerName = span.textContent;
-    if (trainerName === "Алексей Полухин") {
-      span.textContent =
-        translations[lang].scheduleDetails.trainers.alexeyPolukhin;
-    } else if (trainerName === "Александра Литвяк") {
-      span.textContent =
-        translations[lang].scheduleDetails.trainers.alexandraLitvyak;
-    } else if (trainerName === "Открытый ринг") {
-      span.textContent = translations[lang].scheduleDetails.openRing;
-    }
-  });
-
-  // Update group names
-
-  if (document.getElementById("adults-beginners")) {
-    beginners.textContent = translations[lang].scheduleDetails.adultsBeginners;
-  }
-
-  if (document.getElementById("stretching")) {
-    stretching.textContent = translations[lang].scheduleDetails.stretching;
-  }
-}
-
 // Function to change language
 function changeLanguage(lang) {
   // Save selected language to localStorage
@@ -354,7 +219,8 @@ function changeLanguage(lang) {
     translations[lang].description;
   document.getElementById("main-header").textContent =
     translations[lang].mainHeader;
-
+  document.getElementById("schedule-header-text").textContent =
+    translations[lang].schedule;
   // Update all group training sections
   const groupTrainingsElements = document.querySelectorAll("#group-trainings");
   groupTrainingsElements.forEach((element) => {
@@ -401,6 +267,8 @@ function changeLanguage(lang) {
   const massagePrice = document.querySelector(".price-massage p");
   if (massagePrice) massagePrice.textContent = translations[lang].massagePrice;
 
+  document.querySelector(".team-slider__header").textContent =
+    translations[lang].ourTeam;
   // Update team section
   document.querySelector(".wbt-team__header").textContent =
     translations[lang].ourTeam;
@@ -412,8 +280,6 @@ function changeLanguage(lang) {
     if (teamMemberNames[index]) member.textContent = teamMemberNames[index];
   });
 
-  document.getElementById("photo-gallery-header").textContent =
-    translations[lang].photoGalleryHeader;
   document.getElementById("contacts").textContent = translations[lang].contacts;
 
   // Update addresses
